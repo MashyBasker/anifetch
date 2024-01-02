@@ -1,6 +1,5 @@
-#[allow(unused)]
 use sysinfo::{
-    Components, Disks, Networks, System, RefreshKind, CpuRefreshKind
+    System, RefreshKind, CpuRefreshKind
 };
 use std::{collections::HashMap, env, io::{self, Write}};
 use crossterm::{
@@ -12,7 +11,7 @@ use crossterm::{
 // use termion::cursor;
 
 fn bytes_to_gb(bytes: u64) -> f64 {
-    return bytes as f64 / 1024.0 / 1024.0 / 1024.0;
+    bytes as f64 / 1024.0 / 1024.0 / 1024.0
 }
 
 fn format_uptime(seconds: u64) -> String {
@@ -44,10 +43,10 @@ fn get_system_info() -> HashMap<String, String> {
     info.insert("Shell".to_string(), env::var("SHELL").unwrap().split('/').collect::<Vec<&str>>()[3].to_string());
     info.insert("Uptime".to_string(), format_uptime(System::uptime()));
 
-    return info;
+    info
 }
 
-pub fn display_info() -> () {
+pub fn display_info() {
     let sys_info: HashMap<String, String> = get_system_info();
     let cur_row = 15;
     let left_pad = 45;

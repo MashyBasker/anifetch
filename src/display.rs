@@ -9,10 +9,10 @@ fn choose_image() -> Option<String> {
     let path = "./images";
     let c = fs::read_dir(path).unwrap().count();
     if c == 0 {
-        return None;
+        None
     } else {
         let img_idx = rand::thread_rng().gen_range(0..c);
-        return Some(format!("./images/{}.png", img_idx));
+        Some(format!("./images/{}.png", img_idx))
     }
 }
 
