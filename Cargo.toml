@@ -4,11 +4,8 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-colored = "2.1.0"
 crossterm = "0.27.0"
 image = "0.24.7"
 rand = "0.8.5"
-rgb = "0.8.37"
-rusttype = "0.9.3"
 sysinfo = "0.30.3"
 termcolor = "1.4.0"
