@@ -21,11 +21,7 @@ cd anifetch
 
 **2. Build the application**
 
-```
-cargo build --release
-```
-
-**3. Copy/Move the binary**
-```
-cp target/release/anifetch ~/.local/bin/anifetch
+```bash
+$ chmod +x build.sh
+$ ./build.sh
 ```

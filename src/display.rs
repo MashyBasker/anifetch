@@ -6,20 +6,20 @@ use rand::Rng;
 
 // TODO: fix dependency on .png format 
 fn choose_image() -> Option<String> {
-    let path = "./images";
+    let path = "/tmp/anifetch-images";
     let c = fs::read_dir(path).unwrap().count();
     if c == 0 {
         None
     } else {
         let img_idx = rand::thread_rng().gen_range(0..c);
-        Some(format!("./images/{}.png", img_idx))
+        Some(format!("/tmp/anifetch-images/{}.png", img_idx))
     }
 }
 
 
 pub fn convert() {
     let impath = choose_image().unwrap();
-    // println!("{}", impath);
+    //println!("{}", impath);
     let img = image::open(impath)
         .expect("[error]: couldn't read image file");
     let ascii_width = 40;
