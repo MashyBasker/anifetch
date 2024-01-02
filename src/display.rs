@@ -4,6 +4,7 @@ use std::io::Write;
 use std::fs;
 use rand::Rng;
 
+// TODO: fix dependency on .png format 
 fn choose_image() -> Option<String> {
     let path = "./images";
     let c = fs::read_dir(path).unwrap().count();
@@ -18,7 +19,7 @@ fn choose_image() -> Option<String> {
 
 pub fn convert() {
     let impath = choose_image().unwrap();
-    println!("{}", impath);
+    // println!("{}", impath);
     let img = image::open(impath)
         .expect("[error]: couldn't read image file");
     let ascii_width = 40;
@@ -50,5 +51,4 @@ pub fn convert() {
         stdout.reset().expect("Failed to reset color");
         writeln!(&mut stdout).expect("Failed to move to the next line");
     }
-
 }
