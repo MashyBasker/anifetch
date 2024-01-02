@@ -3,7 +3,7 @@
 Anifetch is a lightweight and cute fetch utility written in Rust that combines system information with adorable chibi anime characters. This utility prints a chibi anime character alongside key system details, creating a delightful terminal experience.
 
 
-<p align="center"><img src="screenshot.png" alt="demo" width="300" height="200"></p>
+<p align="center"><img src="./screenshot.png" alt="demo" width="300" height="200"></p>
 
 ## Features
 
