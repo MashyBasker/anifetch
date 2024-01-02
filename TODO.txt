@@ -1,0 +1,7 @@
+Features:
+- add colorization to the system information labels
+
+Enhancements:
+- add more data to the fetch
+- add more anime images :)
+- make the display consistent
