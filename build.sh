@@ -1,5 +1,6 @@
 #/usr/bin/bash
 
-cp -r anifetch-images/ /tmp/
+mkdir -p ~/.config/anifetch
+cp -r gallery/ ~/.config/anifetch
 cargo build --release
 cp target/release/anifetch ~/.local/bin/anifetch

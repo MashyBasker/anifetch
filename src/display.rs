@@ -6,13 +6,13 @@ use rand::Rng;
 
 // TODO: fix dependency on .png format 
 fn choose_image() -> Option<String> {
-    let path = "/tmp/anifetch-images";
+    let path = "~/.config/anifetch/gallery";
     let c = fs::read_dir(path).unwrap().count();
     if c == 0 {
         None
     } else {
         let img_idx = rand::thread_rng().gen_range(0..c);
-        Some(format!("/tmp/anifetch-images/{}.png", img_idx))
+        Some(format!("~/.config/anifetch/gallery/{}.png", img_idx))
     }
 }
 
